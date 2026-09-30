@@ -1,4 +1,4 @@
-# ChunkUnloader - Chunk range mod that trims unnecessary chunks
+# ChunkUnloader [agent] - Chunk range mod that trims unnecessary chunks
 
 A JavaAgent mod for Project Zomboid B42.21. Changes the chunk load range once at startup and cuts outer unnecessary chunks to improve FPS.
 
@@ -41,7 +41,7 @@ Note: visual safety is not unified across all resolutions, so if you play at a r
 ### jar location (when subscribed via Workshop)
 
 ```text
-<SteamLibrary>\steamapps\workshop\content\108600\3804362708\mods\ChunkUnloader\42.21\agent\cu-agent.jar
+<SteamLibrary>\steamapps\workshop\content\108600\3810703793\mods\ChunkUnloader-agent\42.21\agent\cu-agent.jar
 ```
 
 Note: `<SteamLibrary>` varies by environment (default is `C:\Program Files (x86)\Steam`).
