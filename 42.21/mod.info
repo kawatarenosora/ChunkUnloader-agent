@@ -1,0 +1,7 @@
+name=ChunkUnloader
+id=ChunkUnloader
+description=Unload unnecessary chunks: base / base-2/-4/-6 tiers against a resolution-adjusted base (19@1080p, 21@1440p, 23@4K), applied once at boot for FPS. B42, Lua + Java bridge (cu-agent).
+modversion=1.6.0
+pzversion=42.21
+author=ChunkUnloader
+poster=poster.png

@@ -1,0 +1,14 @@
+{
+    "UI_options_CU_Title": "チャンク幅 (起動時適用)",
+    "UI_options_CU_RestartNote": "変更時は必ずゲームを終了して再起動してください (タイトル復帰では不可)。",
+    "UI_options_CU_Mode": "モード",
+    "UI_options_CU_Mode_desc": "OFF=バニラ無変更。規定値=解像度別の推奨グリッド（1080pで19、1440pで21、4Kで23）。規定-2/-4/-6=規定値-N。",
+    "UI_options_CU_Mode_off": "OFF（バニラ）",
+    "UI_options_CU_Mode_base": "規定値（解像度別の推奨）",
+    "UI_options_CU_Mode_minus2": "規定-2",
+    "UI_options_CU_Mode_minus4": "規定-4",
+    "UI_options_CU_Mode_minus6": "規定-6",
+    "UI_options_CU_Mode_custom": "カスタム（FixedGridスライダー）",
+    "UI_options_CU_FixedGrid": "固定チャンク幅 (カスタム用、5-17)",
+    "UI_options_CU_FixedGrid_desc": "奇数のみ (偶数は切り上げ)。絶対指定でバニラ上限あり。事前にセーブをバックアップ。"
+}

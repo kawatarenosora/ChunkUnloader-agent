@@ -1,0 +1,59 @@
+plugins { id 'java'; id 'com.gradleup.shadow' version '9.2.2' }
+
+// CU agent touches game statics (chunkGridWidth), so per-rev verification
+// applies on the Calc side; the Lua-exposure side is version-independent.
+// Default revision is a display tag (lenient gate).
+// Override if needed: gradle build -PcuRev=<tag>
+def cuRev = findProperty('cuRev') ?: 'unversioned'
+def GAME_DIR = "D:/PL/新しいフォルダー (2)/b42.21"
+
+repositories { mavenCentral() }
+
+dependencies {
+    implementation 'net.bytebuddy:byte-buddy:1.18.8'
+    compileOnly files(GAME_DIR)
+}
+
+sourceSets {
+    main {
+        java { srcDirs = ['src/main/java'] }
+        resources { srcDirs = ['src/main/resources'] }
+    }
+}
+
+processResources {
+    filesMatching('cu/build-info.properties') {
+        expand(revision: cuRev)
+    }
+}
+
+compileJava {
+    sourceCompatibility = 25
+    targetCompatibility = 25
+    options.encoding = 'UTF-8'
+}
+
+// Packaged artifact: version-folder agent (per-game-version jar discipline,
+// so 42.21 and a future 42.22 can ship different jars side by side).
+// Refreshed automatically after every shadowJar via finalizedBy.
+tasks.register('copyAgent', Copy) {
+    dependsOn shadowJar
+    from shadowJar
+    into layout.projectDirectory.dir('../42.21/agent')
+}
+shadowJar.finalizedBy copyAgent
+jar { enabled = false }
+
+shadowJar {
+    archiveBaseName.set('cu-agent')
+    archiveClassifier.set('')
+    archiveVersion.set('')
+    relocate 'net.bytebuddy', 'cu.shade.net.bytebuddy'
+    manifest {
+        attributes(
+            'Premain-Class': 'cu.Agent',
+            'Can-Redefine-Classes': 'true',
+            'Can-Retransform-Classes': 'true'
+        )
+    }
+}

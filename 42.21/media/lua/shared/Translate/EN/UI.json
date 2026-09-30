@@ -1,0 +1,14 @@
+{
+    "UI_options_CU_Title": "Chunk grid (applies at boot)",
+    "UI_options_CU_RestartNote": "Always quit to desktop and restart to apply changes (menu return is not enough).",
+    "UI_options_CU_Mode": "Mode",
+    "UI_options_CU_Mode_desc": "Off=vanilla untouched. Base=recommended grid for your resolution (19 at 1080p, 21 at 1440p, 23 at 4K). Base-2/-4/-6=base minus N.",
+    "UI_options_CU_Mode_off": "Off (vanilla)",
+    "UI_options_CU_Mode_base": "Base (resolution default)",
+    "UI_options_CU_Mode_minus2": "Base -2",
+    "UI_options_CU_Mode_minus4": "Base -4",
+    "UI_options_CU_Mode_minus6": "Base -6",
+    "UI_options_CU_Mode_custom": "Custom (FixedGrid slider)",
+    "UI_options_CU_FixedGrid": "Fixed grid width (Custom mode, 5-17)",
+    "UI_options_CU_FixedGrid_desc": "Odd values only (even rounds up). Absolute grid, capped at vanilla. Back up saves first."
+}
