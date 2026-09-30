@@ -2,4 +2,5 @@ Manifest-Version: 1.0
 Premain-Class: cu.Agent
 Can-Redefine-Classes: true
 Can-Retransform-Classes: true
+Multi-Release: true
 

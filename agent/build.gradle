@@ -5,13 +5,14 @@ plugins { id 'java'; id 'com.gradleup.shadow' version '9.2.2' }
 // Default revision is a display tag (lenient gate).
 // Override if needed: gradle build -PcuRev=<tag>
 def cuRev = findProperty('cuRev') ?: 'unversioned'
-def GAME_DIR = "D:/PL/新しいフォルダー (2)/b42.21"
+def GAME_DIR = "E:/Program Files (x86)/Steam/steamapps/common/ProjectZomboid"
+def GAME_JAR = "${GAME_DIR}/projectzomboid.jar"
 
 repositories { mavenCentral() }
 
 dependencies {
     implementation 'net.bytebuddy:byte-buddy:1.18.8'
-    compileOnly files(GAME_DIR)
+    compileOnly files(GAME_JAR)
 }
 
 sourceSets {
