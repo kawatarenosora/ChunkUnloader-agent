@@ -1,7 +1,5 @@
 # ChunkUnloader - Chunk range mod that trims unnecessary chunks
 
-[日本語](README.ja.md)
-
 A JavaAgent mod for Project Zomboid B42.21. Changes the chunk load range once at startup and cuts outer unnecessary chunks to improve FPS.
 
 The vanilla default (19 at 1080p) covers the full-screen range, but that width is only needed when you zoom out to the maximum render range and look farthest with aim camera pan. In normal play you rarely look that far, so this mod reduces outer chunk loading in tiers.
